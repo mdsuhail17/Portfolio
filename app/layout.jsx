@@ -5,7 +5,7 @@ import { PortfolioDock } from '../components/ui/portfolio-dock'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Animated Portfolio',
+  title: 'Md Suhail',
   description: 'A highly animated and visually engaging portfolio website',
 }
 

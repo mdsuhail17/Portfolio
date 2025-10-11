@@ -103,7 +103,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 z-10">
       <h1 className="text-2xl md:text-7xl font-bold text-white">
        Hi, I'm Md Suhail
       </h1>
@@ -113,6 +113,18 @@ export const Header = () => {
       <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200">
        I build modern web applications using Java, Spring Boot, React, and cloud technologies. With strong problem-solving skills and clean coding practices, I craft scalable, efficient, and user-friendly solutions. Always learning, always building.
       </p>
+      <div className="mt-8 relative z-20">
+        <a
+          href="https://drive.google.com/file/d/1Zwg0ZmEfGFZU6khw6Ydz5cAxSIUruxJ9/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white hover:bg-black text-black hover:text-white px-6 py-3 rounded-lg font-bold transition-colors inline-block relative z-30 pointer-events-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
+          Download Resume
+        </a>
+      </div>
+
     </div>
   );
 };

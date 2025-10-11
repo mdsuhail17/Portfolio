@@ -71,14 +71,20 @@ const ProjectsSection = () => {
                 <X className="w-6 h-6" />
               </button>
               
-              <div className="aspect-video bg-black rounded-t-xl overflow-hidden">
-                <iframe
-                  src={selectedProject.video}
-                  title={selectedProject.title}
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+              <div className="aspect-video bg-black rounded-t-xl overflow-hidden flex items-center justify-center">
+                {selectedProject.id === "2" ? (
+                  <div className="bg-white text-black text-2xl font-semibold w-full h-full flex items-center justify-center">
+                    Video is Coming Soon
+                  </div>
+                ) : (
+                  <iframe
+                    src={selectedProject.video}
+                    title={selectedProject.title}
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                )}
               </div>
             </div>
 

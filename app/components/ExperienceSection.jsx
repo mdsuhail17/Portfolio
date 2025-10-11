@@ -289,6 +289,20 @@ const ExperienceSection = () => {
                           </a>
                         </div>
                       )}
+
+                      {/* Certificate Link for Smart India Hackathon */}
+                      {exp.id === 4 && (
+                        <div className="flex gap-3 mt-4">
+                          <a
+                            href="https://drive.google.com/file/d/16u_kkYu6remySuLKkqNUwfNGAFk0Rgcs/view?usp=drive_link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 bg-yellow-600/50 hover:bg-yellow-700/50 px-3 py-2 rounded-lg transition-colors text-white text-sm"
+                          >
+                            Certificate
+                          </a>
+                        </div>
+                      )}
                     </div>
 
                     {/* Floating Elements */}
