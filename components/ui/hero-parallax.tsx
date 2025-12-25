@@ -115,7 +115,7 @@ export const Header = () => {
       </p>
       <div className="mt-8 relative z-20">
         <a
-          href="https://drive.google.com/file/d/1Zwg0ZmEfGFZU6khw6Ydz5cAxSIUruxJ9/view?usp=drive_link"
+          href="https://drive.google.com/file/d/1A6alPsXGdiak4FOCl92GeWMqN9N8lGH3/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white hover:bg-black text-black hover:text-white px-6 py-3 rounded-lg font-bold transition-colors inline-block relative z-30 pointer-events-auto"
