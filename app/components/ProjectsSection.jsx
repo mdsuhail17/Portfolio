@@ -15,7 +15,7 @@ const projects = [
     video: "https://www.youtube.com/embed/cg52C_uXVxQ",
     tags: ["React", "Spring Boot", "MySQL", "JWT", "Redux", "Bootstrap"],
     github: "https://github.com/mdsuhail17/E-Commerce-Website-using-React-Spring-Boot-and-Mysql",
-    live: "https://production.d3j8xjzug6oja7.amplifyapp.com/home",
+    live: "https://ecommerce-frontend-rho-lime.vercel.app/",
     fullDescription: "A comprehensive e-commerce platform built with React frontend and Spring Boot backend. Features include user authentication, product catalog, shopping cart, secure payment processing, order management, and admin dashboard for inventory control."
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     video: "https://youtube.com/@learntechwithsuhail?si=TrgcGlvkD9FzFutN",
     tags: ["Spring Boot", "MySQL", "REST API", "JPA", "Maven"],
     github: "https://github.com/mdsuhail17/FullStack-Project-Java-Spring-Boot--School-Management-",
-    live: "https://d3l9pp35ufm08p.cloudfront.net/",
+    live: "https://crazystore.onrender.com/",
     fullDescription: "A comprehensive school management backend system built with Spring Boot and MySQL. Features include student enrollment, course management, teacher assignment, grade tracking, and administrative dashboard with REST API endpoints."
   }
 ]

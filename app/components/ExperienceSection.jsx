@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
+
+
 const ExperienceSection = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, threshold: 0.2 })
@@ -258,7 +260,7 @@ const ExperienceSection = () => {
                             GitHub
                           </a>
                           <a
-                            href="https://production.d3j8xjzug6oja7.amplifyapp.com/home"
+                            href="https://ecommerce-frontend-rho-lime.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 bg-blue-600/50 hover:bg-blue-700/50 px-3 py-2 rounded-lg transition-colors text-white text-sm"
@@ -280,7 +282,7 @@ const ExperienceSection = () => {
                             GitHub
                           </a>
                           <a
-                            href="https://d3l9pp35ufm08p.cloudfront.net/home"
+                            href="https://crazystore.onrender.com/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 bg-blue-600/50 hover:bg-blue-700/50 px-3 py-2 rounded-lg transition-colors text-white text-sm"
