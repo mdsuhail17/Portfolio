@@ -59,14 +59,14 @@ const Gallery4 = ({
   }, [carouselApi]);
 
   return (
-    <section className="py-32 bg-black text-white">
-      <div className="container mx-auto">
+    <section className="py-16 sm:py-24 md:py-32 bg-black text-white">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="mb-8 flex items-end justify-between md:mb-14 lg:mb-16">
-          <div className="flex flex-col gap-4">
-            <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl text-white">
+          <div className="flex flex-col gap-3 md:gap-4">
+            <h2 className="text-2xl sm:text-3xl font-medium md:text-4xl lg:text-5xl text-white text-center md:text-left">
               {title}
             </h2>
-            <p className="max-w-lg text-gray-400">{description}</p>
+            <p className="max-w-lg text-sm sm:text-base text-gray-400 text-center md:text-left mx-auto md:mx-0 text-justify">{description}</p>
           </div>
           <div className="hidden shrink-0 gap-2 md:flex">
             <Button
@@ -94,7 +94,7 @@ const Gallery4 = ({
           </div>
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full mx-4 sm:mx-6 md:mx-0">
         <Carousel
           setApi={setCarouselApi}
           opts={{
@@ -105,33 +105,33 @@ const Gallery4 = ({
             },
           }}
         >
-          <CarouselContent className="ml-0 2xl:ml-[max(8rem,calc(50vw-700px))] 2xl:mr-[max(0rem,calc(50vw-700px))]">
+          <CarouselContent className="ml-4 sm:ml-6 md:ml-0 2xl:ml-[max(8rem,calc(50vw-700px))] 2xl:mr-[max(0rem,calc(50vw-700px))]">
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
-                className="max-w-[320px] pl-[20px] lg:max-w-[360px]"
+                className="max-w-[280px] sm:max-w-[320px] pl-[12px] sm:pl-[20px] lg:max-w-[360px]"
               >
                 <div 
                   onClick={() => onItemClick?.(item)}
-                  className="group rounded-xl cursor-pointer"
+                  className="group rounded-lg sm:rounded-xl cursor-pointer"
                 >
-                  <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
+                  <div className="group relative h-full min-h-[20rem] sm:min-h-[24rem] md:min-h-[27rem] max-w-full overflow-hidden rounded-lg sm:rounded-xl aspect-[4/3] sm:aspect-[5/4] md:aspect-[5/4] lg:aspect-[16/9]">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                      className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 h-full bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                    <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6 text-white md:p-8">
-                      <div className="mb-2 pt-4 text-xl font-semibold md:mb-3 md:pt-4 lg:pt-4">
+                    <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-4 sm:p-6 text-white md:p-8">
+                      <div className="mb-2 pt-2 sm:pt-4 text-base sm:text-lg md:text-xl font-semibold md:mb-3">
                         {item.title}
                       </div>
-                      <div className="mb-8 line-clamp-2 md:mb-12 lg:mb-9 text-gray-300">
+                      <div className="mb-6 sm:mb-8 line-clamp-2 md:mb-12 lg:mb-9 text-xs sm:text-sm md:text-base text-gray-300">
                         {item.description}
                       </div>
-                      <div className="flex items-center text-sm text-blue-400">
+                      <div className="flex items-center text-xs sm:text-sm text-blue-400">
                         Read more{" "}
-                        <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="ml-2 size-4 sm:size-5 transition-transform group-hover:translate-x-1" />
                       </div>
                     </div>
                   </div>

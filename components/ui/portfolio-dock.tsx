@@ -6,7 +6,7 @@ import {
   Code,
   Briefcase,
   Youtube,
-  Calendar,
+  GraduationCap,
   Mail,
 } from 'lucide-react';
 
@@ -35,11 +35,18 @@ const portfolioSections = [
     href: '#skills',
   },
   {
-    title: 'Projects',
+    title: 'Experience',
     icon: (
       <Briefcase className='h-full w-full text-neutral-600 dark:text-neutral-300' />
     ),
-    href: '#projects',
+    href: '#experience',
+  },
+  {
+    title: 'Education',
+    icon: (
+      <GraduationCap className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+    ),
+    href: '#education',
   },
   {
     title: 'YouTube',
@@ -47,13 +54,6 @@ const portfolioSections = [
       <Youtube className='h-full w-full text-neutral-600 dark:text-neutral-300' />
     ),
     href: '#youtube',
-  },
-  {
-    title: 'Experience',
-    icon: (
-      <Calendar className='h-full w-full text-neutral-600 dark:text-neutral-300' />
-    ),
-    href: '#experience',
   },
   {
     title: 'Contact',

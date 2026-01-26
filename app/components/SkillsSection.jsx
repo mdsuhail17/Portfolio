@@ -2,13 +2,26 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { OrbitingCircles } from '../../components/ui/orbiting-circles'
 import { TechIcons } from '../../components/ui/tech-icons'
 
 const SkillsSection = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, threshold: 0.3 })
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  // Scale factor for mobile (0.6 means 60% of the radius)
+  const scaleFactor = isMobile ? 0.6 : 1
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -58,19 +71,19 @@ const SkillsSection = () => {
           {/* Orbiting Circles Skills Display */}
           <motion.div
             variants={itemVariants}
-            className="relative flex h-[600px] w-full flex-col items-center justify-center overflow-hidden rounded-lg"
+            className="relative flex h-[400px] sm:h-[500px] md:h-[550px] w-full flex-col items-center justify-center overflow-hidden rounded-lg"
           >
             {/* Center Icon */}
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={isInView ? { scale: 1, rotate: 0 } : { scale: 0, rotate: -180 }}
               transition={{ delay: 0.5, duration: 0.8, type: 'spring' }}
-              className="relative z-10 w-24 h-24 rounded-full glass flex items-center justify-center"
+              className="relative z-10 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full glass flex items-center justify-center"
             >
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                className="text-3xl font-bold text-gradient"
+                className="text-xl sm:text-2xl md:text-3xl font-bold text-gradient"
               >
                 Skills
               </motion.div>
@@ -78,8 +91,8 @@ const SkillsSection = () => {
 
             {/* First Orbit - Java and JavaScript */}
             <OrbitingCircles
-              className="size-[55px] border-none bg-transparent"
-              radius={110}
+              className="size-[40px] sm:size-[50px] md:size-[55px] border-none bg-transparent"
+              radius={Math.round(95 * scaleFactor)}
               duration={20}
             >
               <motion.div
@@ -91,8 +104,8 @@ const SkillsSection = () => {
             </OrbitingCircles>
 
             <OrbitingCircles
-              className="size-[55px] border-none bg-transparent"
-              radius={110}
+              className="size-[40px] sm:size-[50px] md:size-[55px] border-none bg-transparent"
+              radius={Math.round(95 * scaleFactor)}
               duration={20}
               delay={0.5}
             >
@@ -106,8 +119,8 @@ const SkillsSection = () => {
 
             {/* Second Orbit - React, Spring Boot, MySQL */}
             <OrbitingCircles
-              className="size-[60px] border-none bg-transparent"
-              radius={200}
+              className="size-[45px] sm:size-[55px] md:size-[60px] border-none bg-transparent"
+              radius={Math.round(175 * scaleFactor)}
               duration={25}
               reverse
             >
@@ -120,8 +133,8 @@ const SkillsSection = () => {
             </OrbitingCircles>
 
             <OrbitingCircles
-              className="size-[60px] border-none bg-transparent"
-              radius={200}
+              className="size-[45px] sm:size-[55px] md:size-[60px] border-none bg-transparent"
+              radius={Math.round(175 * scaleFactor)}
               duration={25}
               delay={8.3}
               reverse
@@ -135,8 +148,8 @@ const SkillsSection = () => {
             </OrbitingCircles>
 
             <OrbitingCircles
-              className="size-[60px] border-none bg-transparent"
-              radius={200}
+              className="size-[45px] sm:size-[55px] md:size-[60px] border-none bg-transparent"
+              radius={Math.round(175 * scaleFactor)}
               duration={25}
               delay={16.6}
               reverse
@@ -151,8 +164,8 @@ const SkillsSection = () => {
 
             {/* Third Orbit - AWS, Docker */}
             <OrbitingCircles
-              className="size-[50px] border-none bg-transparent"
-              radius={290}
+              className="size-[38px] sm:size-[45px] md:size-[50px] border-none bg-transparent"
+              radius={Math.round(255 * scaleFactor)}
               duration={30}
             >
               <motion.div
@@ -164,8 +177,8 @@ const SkillsSection = () => {
             </OrbitingCircles>
 
             <OrbitingCircles
-              className="size-[50px] border-none bg-transparent"
-              radius={290}
+              className="size-[38px] sm:size-[45px] md:size-[50px] border-none bg-transparent"
+              radius={Math.round(255 * scaleFactor)}
               duration={30}
               delay={15}
             >
@@ -179,8 +192,8 @@ const SkillsSection = () => {
 
             {/* Fourth Orbit - GitHub, Git, Postman, VS Code, IntelliJ, Eclipse */}
             <OrbitingCircles
-              className="size-[42px] border-none bg-transparent"
-              radius={380}
+              className="size-[32px] sm:size-[38px] md:size-[42px] border-none bg-transparent"
+              radius={Math.round(335 * scaleFactor)}
               duration={35}
               reverse
             >
@@ -193,8 +206,8 @@ const SkillsSection = () => {
             </OrbitingCircles>
 
             <OrbitingCircles
-              className="size-[42px] border-none bg-transparent"
-              radius={380}
+              className="size-[32px] sm:size-[38px] md:size-[42px] border-none bg-transparent"
+              radius={Math.round(335 * scaleFactor)}
               duration={35}
               delay={5.8}
               reverse
@@ -208,8 +221,8 @@ const SkillsSection = () => {
             </OrbitingCircles>
 
             <OrbitingCircles
-              className="size-[42px] border-none bg-transparent"
-              radius={380}
+              className="size-[32px] sm:size-[38px] md:size-[42px] border-none bg-transparent"
+              radius={Math.round(335 * scaleFactor)}
               duration={35}
               delay={11.6}
               reverse
@@ -223,8 +236,8 @@ const SkillsSection = () => {
             </OrbitingCircles>
 
             <OrbitingCircles
-              className="size-[42px] border-none bg-transparent"
-              radius={380}
+              className="size-[32px] sm:size-[38px] md:size-[42px] border-none bg-transparent"
+              radius={Math.round(335 * scaleFactor)}
               duration={35}
               delay={17.4}
               reverse
@@ -238,8 +251,8 @@ const SkillsSection = () => {
             </OrbitingCircles>
 
             <OrbitingCircles
-              className="size-[42px] border-none bg-transparent"
-              radius={380}
+              className="size-[32px] sm:size-[38px] md:size-[42px] border-none bg-transparent"
+              radius={Math.round(335 * scaleFactor)}
               duration={35}
               delay={23.2}
               reverse
@@ -253,8 +266,8 @@ const SkillsSection = () => {
             </OrbitingCircles>
 
             <OrbitingCircles
-              className="size-[42px] border-none bg-transparent"
-              radius={380}
+              className="size-[32px] sm:size-[38px] md:size-[42px] border-none bg-transparent"
+              radius={Math.round(335 * scaleFactor)}
               duration={35}
               delay={29}
               reverse
@@ -269,8 +282,8 @@ const SkillsSection = () => {
 
             {/* Fifth Orbit - ChatGPT, Windsurf, Amazon Q */}
             <OrbitingCircles
-              className="size-[38px] border-none bg-transparent"
-              radius={470}
+              className="size-[30px] sm:size-[35px] md:size-[38px] border-none bg-transparent"
+              radius={Math.round(415 * scaleFactor)}
               duration={40}
             >
               <motion.div
@@ -282,8 +295,8 @@ const SkillsSection = () => {
             </OrbitingCircles>
 
             <OrbitingCircles
-              className="size-[38px] border-none bg-transparent"
-              radius={470}
+              className="size-[30px] sm:size-[35px] md:size-[38px] border-none bg-transparent"
+              radius={Math.round(415 * scaleFactor)}
               duration={40}
               delay={13.3}
             >
@@ -296,8 +309,8 @@ const SkillsSection = () => {
             </OrbitingCircles>
 
             <OrbitingCircles
-              className="size-[38px] border-none bg-transparent"
-              radius={470}
+              className="size-[30px] sm:size-[35px] md:size-[38px] border-none bg-transparent"
+              radius={Math.round(415 * scaleFactor)}
               duration={40}
               delay={26.6}
             >

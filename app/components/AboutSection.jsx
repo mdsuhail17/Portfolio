@@ -276,7 +276,7 @@ export default function AboutSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Coffee className="w-4 h-4" />
-            JAVA FULL STACK DEVELOPER
+            AI-ENTHUSIASTIC FULL-STACK DEVELOPER
           </motion.span>
           <h2 className="text-4xl md:text-5xl font-light mb-4 text-center">About Me</h2>
           <motion.div
@@ -288,7 +288,7 @@ export default function AboutSection() {
         </motion.div>
 
         <motion.p className="text-center max-w-3xl mx-auto mb-16 text-gray-600 text-lg" variants={itemVariants}>
-          I'm a passionate Java Full Stack Developer with expertise in building scalable web applications. 
+          I'm an AI-enthusiastic Full-Stack Developer with expertise in building scalable web applications. 
           From crafting intuitive frontends with React to developing robust backends with Spring Boot, 
           I deliver end-to-end solutions that drive business success.
         </motion.p>

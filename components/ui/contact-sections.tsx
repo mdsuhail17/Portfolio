@@ -8,7 +8,7 @@ export default function Contact() {
                 </svg>
             ,
             title: "Contact Details",
-            desc: "Mobile: +91 9353649419\nAddress: Ballari, Bangalore",
+            desc: "Mobile: +91 9353649419\nAddress: Bangalore",
             link: {
                 name: "Call Now",
                 href: "tel:+919353649419"

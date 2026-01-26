@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 import HeroSection from './components/HeroSection'
 import AboutSection from './components/AboutSection'
 import SkillsSection from './components/SkillsSection'
-import ProjectsSection from './components/ProjectsSection'
 import YouTubeSection from './components/YouTubeSection'
 import ExperienceSection from './components/ExperienceSection'
+import EducationSection from './components/EducationSection'
 import ContactSection from './components/ContactSection'
 export default function Home() {
   return (
@@ -14,9 +14,9 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
-      <ProjectsSection />
-      <YouTubeSection />
       <ExperienceSection />
+      <EducationSection />
+      <YouTubeSection />
       <div className="bg-gray-100 w-full">
         <ContactSection />
       </div>

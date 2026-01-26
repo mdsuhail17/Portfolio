@@ -68,7 +68,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Lato', 'system-ui', 'sans-serif'],
+        sans: ['Satoshi', 'system-ui', 'sans-serif'],
       },
     },
   },

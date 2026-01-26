@@ -289,19 +289,19 @@ const YouTubeSection = () => {
           {/* Channel CTA */}
           <motion.div 
             variants={itemVariants}
-            className="text-center"
+            className="text-center px-4 sm:px-6"
           >
-            <div className="inline-flex items-center space-x-4 bg-white border border-gray-200 rounded-full px-8 py-4 shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Youtube className="w-6 h-6 text-white" />
+            <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-4 bg-white border border-gray-200 rounded-2xl sm:rounded-full px-6 sm:px-8 py-5 sm:py-4 shadow-lg hover:shadow-xl transition-all duration-300 group w-full sm:w-auto max-w-md sm:max-w-none mx-auto">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                <Youtube className="w-5 h-5 sm:w-6 sm:h-6 text-white flex-shrink-0" />
               </div>
-              <div className="text-left">
-                <p className="text-lg font-semibold text-gray-900">Learn Tech with Suhail</p>
-                <p className="text-sm text-gray-600">Subscribe for web development tutorials</p>
+              <div className="text-center sm:text-left flex-1">
+                <p className="text-base sm:text-lg font-semibold text-gray-900">Learn Tech with Suhail</p>
+                <p className="text-xs sm:text-sm text-gray-600">Subscribe for web development tutorials</p>
               </div>
               <button
                 onClick={() => window.open('https://youtube.com/@learntechwithsuhail?si=TrgcGlvkD9FzFutN', '_blank')}
-                className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95"
+                className="bg-red-600 hover:bg-red-700 text-white px-5 sm:px-6 py-2 rounded-full text-sm sm:text-base font-medium transition-all duration-300 hover:scale-105 active:scale-95 w-auto flex-shrink-0"
               >
                 Subscribe
               </button>

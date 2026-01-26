@@ -108,14 +108,14 @@ export const Header = () => {
        Hi, I'm Md Suhail
       </h1>
       <h2 className="text-xl md:text-5xl font-semibold text-gray-300 mt-4">
-       Passionate Java Full-Stack Developer
+       AI-enthusiastic Full-Stack Developer
       </h2>
       <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200">
-       I build modern web applications using Java, Spring Boot, React, and cloud technologies. With strong problem-solving skills and clean coding practices, I craft scalable, efficient, and user-friendly solutions. Always learning, always building.
+       I'm an AI-enthusiastic Full-Stack Developer who loves building real-world products at the intersection of software engineering and AI.
       </p>
       <div className="mt-8 relative z-20">
         <a
-          href="https://drive.google.com/file/d/1A6alPsXGdiak4FOCl92GeWMqN9N8lGH3/view?usp=sharing"
+          href="https://drive.google.com/file/d/14mDPf8bFWpz5LCTqr9TWpfmknAh5LrPZ/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white hover:bg-black text-black hover:text-white px-6 py-3 rounded-lg font-bold transition-colors inline-block relative z-30 pointer-events-auto"
